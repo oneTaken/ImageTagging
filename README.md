@@ -3,6 +3,10 @@ project results demo. Already transferred on Android app.
 
 This is a similar edition of Apple's Photo Classification function.
 
+Related News:
++ [iPhone相册会自动归类内衣照？这项机器学习功能让妹子们炸了](http://dy.163.com/v2/article/detail/D25POQ8F0511DSSR.html)
+
+Content:
 - [function](#function)
 - [Dataset details](#dataset-details)
 - [confusion matrix](#confusion-matrix)
