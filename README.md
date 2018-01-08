@@ -7,7 +7,7 @@ This is a similar edition of Apple's Photo Classification function.
 - [Dataset details](#dataset-details)
 - [confusion matrix](#confusion-matrix)
 - [prediction time analysis](#prediction-time-analysis)
-- [test case](#test-case)
+- [test cases](#test-cases)
 #  function
 + Give a searching class name, then predict all the photos and cluster and copy all the photos
 matching the class to a new folder.
@@ -26,6 +26,7 @@ Some modification on the origin dataset:
 |train|90|728165|
 |valid|1|8099|
 |test|9|72815|
+
 Tips: The percent is used to choose random samples on every single class to keep 
 data balanced as much as possible. And actually, every class has a loss weight which 
 is the invert percent of the class image number of the total image number.
@@ -47,4 +48,19 @@ The measure is always second(s), it's an average of 100 times.
 |mobilenet|0.0545|0.0178|0.3811|0.1786|
 |vgg19_bn|1.709|3.584|1.308|0.006|
 
-# test case
+# test cases
+|img|predictions|
+|:----:|:-----:|
+|![](./testcases/48091510291869.jpg)|0.5059	风景图片\n0.3084	建筑图片\n0.0484	清新唯美图片|
+|![](./testcases/48201510292256.jpg)|0.4601	清新唯美图片\n0.2996	头像\n0.101	人物图片|
+|![](./testcases/48161510292087.jpg)|0.9781	动物图片\n0.0087	人物图片\n0.0048	表情图片|
+|![](./testcases/48621510293069.jpg)|0.8724	风景图片\n0.0302	背景图片\n0.0289	植物图片|
+|![](./testcases/48781510293210.jpg)|0.6523 建筑图片\n0.2267 风景图片\n0.0263 其他图片|
+|![](./testcases/48701510293147.jpg)|0.6107	建筑图片\n0.3489 风景图片\n0.0125 其他图片|
+|![](./testcases/49611510295798.jpg)|0.933	动物图片\n0.0206 头像\n0.0156 人物图片|
+|![](./testcases/48661510293117.jpg)|0.8418	建筑图片\n0.0998	风景图片\n0.0125	装修图片|
+|![](./testcases/49311510294684.jpg)|0.975	食品图片\n0.0068	生活图片\n0.0057	清新唯美图片|
+|![](./testcases/49091510294155.jpg)|.7052	表情图片\n0.1007	其他图片\n0.0821	节日图片|
+|![](./testcases/49641510295851.jpg)|0.6975	动物图片\n0.1001	头像\n0.0813	表情图片|
+|![](./testcases/49301510294668.jpg)|0.2465	花卉图片\n0.2164	节日图片\n0.1387	生活图片|
+|![](./testcases/49431510295124.jpg)|0.6888	表情图片\n0.0976	动物图片\n0.0875	其他图片|
