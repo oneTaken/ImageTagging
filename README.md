@@ -8,7 +8,7 @@ Related News:
 
 Content:
 - [function](#function)
-- [Dataset details](#dataset-details)
+- [dataset details](#dataset-details)
 - [confusion matrix](#confusion-matrix)
 - [prediction time analysis](#prediction-time-analysis)
 - [test cases](#test-cases)
