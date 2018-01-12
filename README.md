@@ -12,6 +12,7 @@ Content:
 - [confusion matrix](#confusion-matrix)
 - [prediction time analysis](#prediction-time-analysis)
 - [test cases](#test-cases)
+- [AndroidDemoVideo](#AndroidDemoVideo)
 #  function
 + Give a searching class name, then predict all the photos and cluster and copy all the photos
 matching the class to a new folder.
@@ -70,3 +71,7 @@ The measure is always second(s), it's an average of 100 times.
 |![](./testcases/49431510295124.jpg)|0.6888	表情图片\n0.0976	动物图片\n0.0875	其他图片|
 |![](./testcases/cat.png)|0.6222  动物图片\n0.1755  表情图片\n0.0571  人物图片|
 
+
+# AndeoidDemoVideo
+The demo video can be downloaded at [Baidu Drive](https://pan.baidu.com/s/1kXiSpwF). It's a minute long and 
+has a size of 4.3M.
