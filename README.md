@@ -1,5 +1,5 @@
 # ImageTagging
-project results demo. Already transferred on Android app.
+Project results demo. Already transferred on Android app.
 
 This is a similar edition of Apple's Photo Classification function.
 
@@ -7,18 +7,22 @@ Related News:
 + [iPhone相册会自动归类内衣照？这项机器学习功能让妹子们炸了](http://dy.163.com/v2/article/detail/D25POQ8F0511DSSR.html)
 
 Content:
-- [function](#function)
-- [dataset details](#dataset-details)
-- [confusion matrix](#confusion-matrix)
-- [prediction time analysis](#prediction-time-analysis)
-- [test cases](#test-cases)
+- [Functions](#functions)
+- [Dataset Details](#dataset-details)
+- [Confusion Matrix](#confusion-matrix)
+- [Prediction Time Analysis](#prediction-time-analysis)
+- [Test Cases](#test-cases)
 - [AndroidDemoVideo](#AndroidDemoVideo)
-#  function
-+ Give a searching class name, then predict all the photos and cluster and copy all the photos
-matching the class to a new folder.
+
+#  Functions
++ Give a searching class name, predict all the photos, cluster then copy all the photos
+matching the class into a new folder named after the given class name.
 + Give a new photo, then predicate the photo and return the predicted class names.
-Finally give the user a option to choose which class name to classify into.
-#  dataset details
+Finally give the user a freedom to choose which class name to classify into,
+considering the biggest classification probability might not be 
+the user's ideal choice.
+
+#  Dataset Details
 The origin datasets has ~130w images and 21 classes.
 Some modification on the origin dataset:
 + Remove 3 too abstract classes
@@ -39,13 +43,13 @@ We also tried manually choose the loss weight as a super parameter. We manually
 enlarge the loss weight for the people class to try to get better performance on the 
 people class. The results didn't show coherent improvement under some tries. 
 
-# confusion matrix
+# Confusion Matrix
 |Vgg19_bn|mobilenet|
 |----|-----|
 |![](./analysis/vgg_confusion_matrix.png)|![](./analysis/mobile_confusion_matrix.png)
 
 
-# prediction time analysis
+# Prediction Time Analysis
 The measure is always second(s), it's an average of 100 times.
 
 |name|init time|load time|cpu|gpu|
@@ -53,7 +57,7 @@ The measure is always second(s), it's an average of 100 times.
 |mobilenet|0.0545|0.0178|0.3811|0.1786|
 |vgg19_bn|1.709|3.584|1.308|0.006|
 
-# test cases
+# Test Cases
 |img|predictions|
 |:----:|:-----:|
 |![](./testcases/48091510291869.jpg)|0.5059	风景图片\n0.3084	建筑图片\n0.0484	清新唯美图片|
